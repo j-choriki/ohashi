@@ -1,0 +1,986 @@
+// ver 0513.1850.09
+// last choriki
+@charset "UTF-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* ====画面の基本設定==== */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* ====文字の基本設定（タイポグラフィ）==== */
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 62.5%;
+  /*文字の初期化(10px 相当)デフォ:16px*/
+}
+
+p, li {
+  font-size: 1.6rem;
+  /*root の文字サイズ(10px 相当)=16px 相当*/
+}
+
+p {
+  line-height: 1.5;
+  
+  //カラー#333333を使用
+  color: #333333;
+}
+
+h1 {
+  font-size: 2.4rem;
+  /*root の文字サイズ(10px 相当)=24px 相当*/
+  line-height: 2;
+  color: #333333;
+ 
+}
+
+h2 {
+  font-size: 2.1rem;
+  line-height: 2.285;
+  color: #333333;
+}
+
+h3 {
+  font-size: 1.8rem;
+  /*root の文字サイズ(10px 相当)=18px 相当*/
+  line-height: 1.333;
+  color: #333333;
+}
+
+h4, h5, h6 {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 2.4rem;
+  /*一律2行分*/
+}
+
+/* 画像サイズの指示(レスポンシブ・スマホサイトには必須) */
+img {
+  max-width: 100%;
+}
+
+// 以下デザイン部分
+//変数
+$span-color:#A691CA;//紫色
+
+
+header{
+  .topImg{
+    display: none;
+  }
+    // width: calc(100% - 10px);
+    // padding: 0 5px;
+    font-family: serif;
+    h1{
+      padding-top: 3%;
+        font-size: 1.7rem;
+        span{
+          color: $span-color;
+        }
+    }
+    div{
+      div{
+          &:nth-of-type(2){
+              width: 100vw;
+              margin-top: 9rem;
+              text-align: center;
+              p:nth-of-type(1){
+                  font-size: 4rem;
+                  letter-spacing: 2.3rem;
+                  text-align: left;
+                  margin-left:0.5rem;
+                  span{
+                    color:$span-color;
+                  }
+              }
+              p:nth-of-type(2){
+                  font-size: 9rem;
+                  letter-spacing: 2.5rem;
+                  opacity:0.16;
+              }
+              p:nth-of-type(3){
+                  text-align: right;
+                  margin-right: 3rem;
+              }
+          }
+      }      
+  }
+}
+
+section{
+    // height: 100vh;
+    width: 100%;
+    margin: 12rem 0;//各sectionの上下の空白
+    text-align: center;
+    h2{
+        font-size: 2.5rem;
+        width: 120px;
+        margin: 0 auto;
+        letter-spacing: 0.2rem;
+    }
+    span{
+      display: block;
+      font-size: 1rem;
+      letter-spacing: 0;
+      text-align: center;
+    }
+    &:nth-of-type(1){//about
+        div{
+            &:nth-of-type(1){//about_sample1
+              position: relative;
+                margin: 0 auto;
+                img{
+                    width: 85%;  
+                }
+            }           
+            &:nth-of-type(2){//about_sample2
+              height: 40vh;
+              width: 85%;
+              margin: 0 auto;
+              background-image: url(../img/DSC_1830.JPG);
+              background-repeat: no-repeat;
+              background-position: 50%;
+              background-attachment: fixed;
+              background-size: cover;
+            }
+            &:nth-of-type(3){//about文字情報
+              margin-top: 10rem;
+              h2{
+                  border-bottom: 1px solid black;
+              }
+              h3{//お箸とは
+                  font-size: 2.5rem;
+                  margin-top: 4rem;
+                  margin-bottom: 6rem;
+                  letter-spacing: 1rem;
+                  span{//とは
+                    font-size: 1.7rem;
+                    letter-spacing: 0;
+                    display: inline;
+                  }
+              }
+              div{
+                  p{
+                  letter-spacing: 0.2rem;
+                  margin-bottom: 1.5rem;
+                // }
+                // &:nth-of-type(6){
+                //   margin: 3rem 0;
+                // }
+                // &:nth-of-type(7){//とお話いただけるよう
+                //   span{//心をこめてお待ちしております
+                //     font-size: 1.6rem;
+                //   }
+                // }                          
+                  }
+              }
+            }
+          } 
+    }
+    &:nth-of-type(2){//seasonal
+      h2{//空間
+        // margin: 12rem;
+        padding: 12rem 0;
+        margin: 0 auto;
+        line-height: 3.5rem;
+        &::after{
+          content: "Seasonal";
+          font-size: 1.2rem;
+          margin: 0 auto;
+        }
+      }
+      p{
+        margin-bottom: 3rem;
+        &:nth-of-type(1){//木を基調とした空間
+          margin-bottom: 4rem;
+          span{
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  &:nth-of-type(3){//space
+    h2{//空間
+      // margin: 12rem;
+      padding: 12rem 0;
+      margin: 0 auto;
+      line-height: 3.5rem;
+      &::after{
+        content: "Seasonal";
+        font-size: 1.2rem;
+        margin: 0 auto;
+      }
+    }
+    div{
+    p{
+      margin: 2.5rem 0;
+      span{
+        font-size: 1.6rem;
+      }
+    }
+  }
+  }
+  &:nth-of-type(4){//cource
+    h2{//空間
+      // margin: 12rem;
+      padding: 12rem 0;
+      margin: 0 auto;
+      line-height: 3.5rem;
+      &::after{
+        content: "Seasonal";
+        font-size: 1.2rem;
+        margin: 0 auto;
+      }
+    }
+    div{
+      p{
+      margin: 2rem;
+      &:nth-of-type(1){
+        span{
+          font-size: 1.6rem;
+        }
+      }
+    }          
+  }
+  }
+  &:nth-of-type(5){//sight
+    h2{//空間
+      // margin: 12rem;
+      padding: 12rem 0;
+      margin: 0 auto;
+      line-height: 3.5rem;
+      &::after{
+        content: "Seasonal";
+        font-size: 1.2rem;
+        margin: 0 auto;
+      }
+    }
+    div{
+    p{
+      margin: 2rem 0;
+      span{
+        font-size: 1.6rem;
+      }
+      &:nth-of-type(4){
+        margin: 3rem 0;
+      }
+    }         
+  }
+  }
+  &:nth-of-type(6){//city
+    h2{
+      font-size: 1.5rem;
+      margin-bottom: 12rem;
+      margin-top: 12rem;
+      span{
+        font-size:2.5rem;
+        margin-top: -1rem;
+      }
+    }
+    p{
+      width: 75%;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      span{
+        font-size: 1.6rem;
+      }
+      &:nth-of-type(3){
+        width: 90%;
+      }
+    }
+    div{
+      margin: 5rem 0;
+      // margin-bottom: 25rem;
+      img{
+        width: 50%;
+      }
+    }
+  }
+  //ギャラリーはビフォーを使いまとめております
+  &:nth-of-type(7){//gallary
+    height: 50vh;
+    h2{
+      margin-top: 40vh;
+      // font-size: 2.4rem;
+      position: relative;
+      margin-bottom: 50px;
+      span{
+        color: $span-color;
+        font-size: 2.4rem;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+    h2::before{
+      content: "お箸紫";
+      font-size: 1.5rem;
+      position: absolute;
+      left: 0;
+      top: -20px;
+    }
+    
+    p{
+      font-size: 2.5rem;
+      width: 150px;
+      padding: 5px; 
+      margin: 0 auto;
+      border: 1px solid black;
+      // 以下矢印の設定
+     a{
+          /* 矢印の下線の基点とするためrelativeを指定 */
+        position: relative;
+        /* 形状 */
+        display: inline-block;
+        padding: 0 20px;
+        color: #333;
+        text-decoration: none;
+        outline: none;
+     }
+
+     /* 矢印と下線の形状 */
+    a::before{
+      content: "";
+      /* 絶対配置で下線の位置を決める */
+      position: absolute;
+      bottom: 3px;
+      left: 15%;
+      /* 下線の形状 */
+      width: 85%;
+      height: 1px;
+      background-color: #333;
+      /* アニメーションの指定 */
+      transition: all .3s;
+    }
+
+    a::after{
+      content: "";
+      /* 絶対配置で矢印の位置を決める */
+      position: absolute;
+      bottom: 8.1px;
+      right: 0;
+      /* 矢印の形状 */
+      width: 15px;
+      height: 1px;
+      background-color: #333;
+      transform: rotate(35deg);
+      /* アニメションの指定 */
+      transition: all .3s;
+    }
+
+    /* hoverした際の移動 */
+    a:hover::before{
+      left: 25%;
+    }
+
+    a:hover::after{
+      right: -10%;
+    }
+    }
+  }
+}
+.pc{
+  display: none;
+}
+//グレイのところ(お問い合わせ部)は一旦フッターに変更しております
+footer{
+  text-align: center;
+  background-color: darkgray;
+  margin: 0;
+  padding-top: 70px;
+  color: white;
+
+  h2,p{
+    color: white;
+  }
+  h2{
+    font-size: 40px;
+    -ms-writing-mode: tb-rl;//縦書き設定
+    writing-mode: vertical-rl;//縦書き設定
+    margin: 0 auto;
+    letter-spacing: 30px;
+    line-height: 50px;
+    padding-left:40px;
+    span{
+      display: block;
+      font-size: 20px;
+    }
+  }
+  // h2::after{
+  //   content: 'おはし';
+  //   font-size: 20px;
+  // }
+  p{
+    &:nth-of-type(1){//ご予約・おといあわせ
+      margin-top: 60px;
+      span{
+        display: block;
+        font-size: 35px;
+      }
+    }
+    &:nth-of-type(2){//お食事の内容、コース・・・
+      margin-top: 20px;
+      margin-bottom: 90px;
+      span{
+        display: block;
+      }
+    }
+  }
+
+  .flex1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+      div:nth-of-type(1){
+        margin: 10px;
+        margin-left:20px
+      }
+    .item{
+      text-align: left;
+    .flex2{
+      display: flex;
+      margin-bottom: 30px;
+      &:nth-of-type(1){
+        margin: 0;
+        margin-bottom: 30px;
+        p:nth-of-type(1){
+          margin-right: 45px;
+        }
+      }
+      p{
+        margin:0;
+        &:nth-of-type(1){
+          margin-right: 27px;
+          width: 75px;
+        }
+      }
+    }
+    }
+  }
+
+}
+
+//お問い合わせ部分   後にABOUTのところから表示させるJS組みます
+#fixd{
+  text-align: center;
+  background-color: rgba(255, 255, 255,0.8);
+  display: flex;
+  justify-content: space-around;
+  div{
+    width: 40%;
+    h2{
+      line-height: 70px;
+      font-size: 1.3rem;
+    }
+    p{
+      font-size: 2rem;
+      line-height: 70px;
+    }
+  }
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+}
+
+
+//スクロールバー
+
+.scrolldown1{
+  position: absolute;
+  bottom: 130px;
+  // height: 10px;
+}
+.scrolldown1::before{
+  content: "";
+    /*描画位置*/
+  position: absolute;
+  bottom: 0;
+    /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: #fff;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+  animation: pathmove 2s ease-in-out infinite;
+  opacity:0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+  0%{
+    height:0;
+    top:0;
+    opacity: 0;
+  }
+  30%{
+    height:70px;
+    opacity: 1;
+  }
+  100%{
+    height:0;
+    top:120px;
+    opacity: 0;
+  }
+}
+
+
+
+// webサイトデザイン
+@media screen and (min-width: 1024px){
+  header{
+    margin-bottom: 100px;
+    // position: relative;
+    // display:none;
+   h1{
+     display:none;
+   }
+   div{
+     display: flex;
+     justify-content: center;
+   }
+   .topImg{
+     overflow: hidden;
+     display: block;
+    height: 30%;
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 5%;
+   }
+   .title{
+     p{
+      display: none;
+      &:nth-of-type(1){
+        display: block;
+        -ms-writing-mode: tb-rl;//縦書き設定
+        writing-mode: vertical-rl;//縦書き設定
+        position: absolute;
+        top: 200px;
+        right: 300px;
+        height: 250px;
+      }
+      &:nth-of-type(1)::before{
+        content:"おはし";
+        display: block;
+        font-size:20px;
+        font-weight: 0;
+        opacity:0.5;
+        letter-spacing: 48px;
+        margin-top: 5px;
+      }
+     }
+   }
+  }
+  section{
+    &:nth-of-type(1){//about
+      height: 80vh;
+      width: 89%;
+      margin: 0 auto;
+      background-image: url(../img/DSC_1830.JPG);
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-attachment: fixed;
+      background-size: cover;
+      h2,p{
+        color:#fff;
+        // color: #333;
+      }
+      div{
+        &:nth-of-type(1){
+          // position:absolute;
+          top: 30px;
+          left: 0;
+          img{
+          display: none;
+          height: 500px;
+          width: 800px;
+          }
+        }       
+        &:nth-of-type(2){
+          background-image: none;
+          display:none;
+        }
+        &:nth-of-type(3){
+          padding: 50px;
+          h2{
+            margin-top: 40px;
+            border-bottom:1px solid #fff;
+          }
+          h3{
+            // color: #333;
+            color: #fff;
+            // margin-top: -50px;
+          }
+            // p:nth-of-type(2){
+            //   // -ms-writing-mode: tb-rl;//縦書き設定
+            //   // writing-mode: vertical-rl;//縦書き設定
+            //   margin:0 auto;
+            //   // margin-bottom: 50px;
+            // }
+        }
+      }
+    }  
+    &:nth-of-type(2){//seasonal
+      display: flex;
+      justify-content:space-around;
+      text-align: left;
+      span{
+        text-align: left;
+      }
+      div{
+        &:nth-of-type(1){
+          img{
+            height:350px;
+            width: 500px;
+          }
+        }
+        &:nth-of-type(2){
+          -ms-writing-mode: tb-rl;//縦書き設定
+          writing-mode: vertical-rl;//縦書き設定
+          margin-top: -90px;
+          h2{
+            -ms-writing-mode: tb-rl;//縦書き設定
+            writing-mode: vertical-rl;//縦書き設定
+            &::after{
+              content: "";
+            }
+            font-size:30px;
+            letter-spacing: 20px;
+            margin-left: 50px;
+            // span{
+            //   letter-spacing:5px;
+            //   -ms-writing-mode: tb-rl;
+            //   writing-mode: vertical-rl;
+            //   text-orientation: upright;
+            //   margin-top: 40px;
+            // }
+          }
+          p{
+            margin-top: 150px;
+            letter-spacing:5px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+    &:nth-of-type(3){//space
+      display: flex;
+      flex-direction: row-reverse; 
+      justify-content: space-around;
+      margin-top: 300px;
+        div{
+          &:nth-of-type(1){//img
+            margin-right: 50px;
+            img{
+              height:350px;
+              width: 500px;
+            }
+          }
+          &:nth-of-type(2){
+              -ms-writing-mode: tb-rl;//縦書き設定
+              writing-mode: vertical-rl;//縦書き設定
+              text-align: left;
+              // margin-left: 300px;
+              padding-left: 200px;
+              h2{
+                font-size: 30px;
+                letter-spacing:80px;
+                text-align: left;
+                margin: 0;
+                margin-left: 100px;
+                &::after{
+                  content: "";
+                }
+                // span{
+                //   letter-spacing:5px;
+                //   -ms-writing-mode: tb-rl;
+                //   writing-mode: vertical-rl;
+                //   text-orientation: upright;
+                //   margin-top: 40px;
+                // }
+              }
+              span{
+                text-align: left;
+              }
+              p{
+                .pc{
+                  display: block;
+                }
+                letter-spacing:5px;
+                line-height: 40px;
+              }
+
+          }
+        }
+    }
+    &:nth-of-type(4){//cource
+          background-image: url(../img/DSC_1912.JPG);
+          height: 80vh;
+          width: 89%;
+          margin: 0 auto;
+          background-repeat: no-repeat;
+          background-position: 50%;
+          background-attachment: fixed;
+          background-size: cover;
+      div{
+        &:nth-of-type(1){
+          display:none;
+        }
+      }
+      h2,p{
+        // color: #f4f5f6;
+        color: #fff;
+      }
+      h2{
+        padding-top: 150px;
+        padding-bottom: 130px;
+        font-size: 30px;
+      }
+      
+    }
+    &:nth-of-type(5){//sight
+      display: flex;
+      justify-content: space-around;
+      padding-top: 50px;
+      div{
+        &:nth-of-type(1){//img
+          img{
+            height:350px;
+            width: 500px;
+          }
+        }
+        &:nth-of-type(2){
+          -ms-writing-mode: tb-rl;//縦書き設定
+          writing-mode: vertical-rl;//縦書き設定
+          text-align: left;
+          span{
+            text-align: left;
+          }
+          h2{
+            font-size: 30px;
+            letter-spacing:65px;
+            text-align: left;
+            margin:0;
+            &::after{
+              content: "";
+            }
+            // span{
+            // -ms-writing-mode: tb-rl;//縦書き設定
+            // writing-mode: vertical-rl;//縦書き設定
+            // text-orientation: upright;
+            // letter-spacing: 5px;
+            // margin-top: 30px;
+            // }
+          }
+          p{
+            margin: 0;
+            margin-top: 50px;
+            line-height:30px;
+            &:nth-of-type(1){
+              margin-right: 60px;
+            }
+            &:nth-of-type(4),
+            &:nth-of-type(5){
+              margin-right: 50px;
+            }
+          }
+
+        }
+      }
+    }
+    &:nth-of-type(6){//city
+      div{
+        .pc{
+          display: block;
+        }
+        &:nth-of-type(1){
+          // width: 100vw;
+          // height: 50vh;
+          position: relative;
+        }
+        img{
+          position: absolute;
+          top: 200px;
+          left: 10%;
+          height: 170px;
+          width: 170px;
+        }
+      }
+    }
+  }
+
+  footer{
+    margin: 0 auto;
+    width: 90%;
+    h2{
+      font-size: 20px;
+      padding:0;
+      span{
+        display: none;
+      }
+    }
+    iframe{
+      width: 450px;
+    }
+    .fram{
+      display: flex;
+      justify-content: center;
+    }
+    .flex1{
+      div:nth-of-type(1){
+        img{
+          visibility: hidden;
+        }
+      }
+      .item{
+          margin-top: -150px;
+      }
+    }
+  }
+  .scrolldown1{
+    position: absolute;
+    top: -170px !important;
+    // height: 10px;
+  }
+  .scrolldown1::before{
+    background: #333;
+  }
+}
+
+//ボタンcssリセット
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  vertical-align: middle;
+}
+// ハンバーガーメニューspanCss
+.burger-btn{
+  display: block;      
+  width: 39px;      
+  height: 39px;
+  top: 1%;
+  right: 0%;   
+  position: fixed;      
+  z-index: 3;
+  border:none;
+}    
+.bar{      
+  width: 20px;      
+  height: 1px;        
+  display: block;      
+  position: absolute;      
+  left: 50%;      
+  transform: translateX(-50%);      
+  background-color: #333;    
+}    
+.bar_top{   
+  top: 10px;
+}
+.bar_mid{    
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.bar_bottom{
+  bottom: 10px;
+}
+
+//open時
+.burger-btn.close .bar_top{      
+  transform: translate(-50%,10px) rotate(45deg);      
+  transition: transform .3s;    
+}    
+.burger-btn.close .bar_mid{      
+  opacity: 0;       
+  transition: opacity .3s;    
+}    
+.burger-btn.close .bar_bottom{      
+transform: translate(-50%,-8px) rotate(-45deg);      
+transition: transform .3s;    
+}
+
+//ハンバーガー中身
+.nav-wrapper{      
+  visibility: hidden;     
+  opacity: 0;
+  width: 100vw;      
+  height: 100vh;      
+  position: fixed;      
+  top: 0;      
+  left: 0;
+  transition: all .5s;       
+  z-index: 2;     
+}     
+.header-nav{        
+  width: 100%;        
+  height: 100%;        
+  background-color: rgba(255, 255, 255,0.8);        
+  z-index: 2;      
+}     
+.nav-list{        
+  display: block;        
+  position: absolute;        
+  top: 50%;        
+  left: 50%;        
+  transform: translate(-50%,-50%);        
+  text-align: center;    
+  color: #333;  
+}      
+.nav-item{        
+  margin-right: 0;        
+  margin-bottom: 40px;      
+}
+
+/* メニューオープン時 */
+.nav-wrapper.fade {
+	visibility: visible;
+	opacity: 1;
+}
+.noscroll{
+  overflow: hidden;
+}
+
+//アコーディオンメニュー
+.InItem{
+  display: none;
+}
+.nav-open{
+	position: relative;
+  margin-bottom: 2.4rem;
+  margin-top: 2.4rem;
+}
+.nav-open::before{/* 閉じている時 */
+	content: "＋";
+	position: absolute;
+  right: 0px;
+}
+.nav-open.active::before{/* 開いている時 */
+	content: "－";
+}
+.active{
+  display: block;
+}
+.InItem{
+  ul{
+    li{
+      margin-bottom: 20px;
+    }
+  }
+}
