@@ -6,7 +6,7 @@
 ## 開発人数
 ２人
 
-##使用技術
-HTML/CSS
-SASS
-JQuery
+## 使用技術
+HTML/CSS  
+SASS  
+JQuery  
